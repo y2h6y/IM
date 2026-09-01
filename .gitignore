@@ -1,0 +1,27 @@
+# iOS
+*.xcuserstate
+xcuserdata/
+DerivedData/
+*.hmap
+*.ipa
+*.xcarchive
+.build/
+Pods/
+*.resolved
+
+# Go build artifacts
+server/app/qqq-app
+server/gateway/qqq-gateway
+*.log
+
+# Env（包含密钥，不上传）
+.env
+server/.env
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+nohup.out
+/tmp/
