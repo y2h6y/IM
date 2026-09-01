@@ -9,7 +9,7 @@ class WebSocketService: ObservableObject {
 
     private var webSocketTask: URLSessionWebSocketTask?
     private var currentToken: String?
-    private let gatewayURL = "ws://localhost:8081/ws"
+    private let gatewayURL = "wss://localhost:8081/ws"
 
     // ── 重连控制 ──────────────────────────────────────────────────────
     private var reconnectTask:  Task<Void, Never>?

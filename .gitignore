@@ -18,6 +18,9 @@ server/gateway/qqq-gateway
 .env
 server/.env
 
+# TLS 证书（本地生成，不上传）
+server/certs/
+
 # OS
 .DS_Store
 Thumbs.db

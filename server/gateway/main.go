@@ -163,8 +163,10 @@ func main() {
 		w.Write([]byte(`{"status":"ok","connections":` + strconv.Itoa(len(hub.clients)) + `}`))
 	})
 
-	log.Printf("✅ Gateway running on :%s", cfg.GatewayPort)
-	if err := http.ListenAndServe(":"+cfg.GatewayPort, mux); err != nil {
+	log.Printf("✅ Gateway running on WSS :%s", cfg.GatewayPort)
+	certFile := "../certs/localhost+2.pem"
+	keyFile  := "../certs/localhost+2-key.pem"
+	if err := http.ListenAndServeTLS(":"+cfg.GatewayPort, certFile, keyFile, mux); err != nil {
 		log.Fatal(err)
 	}
 }

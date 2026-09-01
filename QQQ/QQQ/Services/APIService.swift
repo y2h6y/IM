@@ -4,7 +4,7 @@ import UIKit
 
 class APIService {
     static let shared = APIService()
-    private let baseURL = "http://localhost:8080"
+    private let baseURL = "https://localhost:8080"
     var token: String = ""   // Access Token，每次请求注入 Authorization header
 
     // MARK: - Auth

@@ -72,8 +72,10 @@ func main() {
 		}
 	}
 
-	log.Printf("✅ App Server running on :%s", cfg.AppPort)
-	if err := r.Run(":" + cfg.AppPort); err != nil {
+	log.Printf("✅ App Server running on HTTPS :%s", cfg.AppPort)
+	certFile := "../certs/localhost+2.pem"
+	keyFile  := "../certs/localhost+2-key.pem"
+	if err := r.RunTLS(":"+cfg.AppPort, certFile, keyFile); err != nil {
 		log.Fatal(err)
 	}
 }
